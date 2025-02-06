@@ -206,7 +206,7 @@ public class Main{
         for (int i = 0; i < list.size(); i++) {
             if (list.get(i) == 0) {
                 list.add(0,list.remove(i));
-                i--;
+                
             }
         }
         return list;

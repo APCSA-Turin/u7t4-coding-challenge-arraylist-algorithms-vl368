@@ -64,28 +64,23 @@ public class Runner {
         System.out.println(Main.modes(intList9));
 
         ArrayList<Integer> list = new ArrayList<Integer>();
-        Collections.addAll(list,1,2,3);
+        Collections.addAll(list,1,0,0,1);
         ArrayList<Integer> expected = new ArrayList<>();
-        Collections.addAll(expected,1,3,3);
+        Collections.addAll(expected,0,0,1,1);
         System.out.print(expected);
-        System.out.println(Main.notAlone(list,2));
+        System.out.println(Main.zeroFront(list));
+        list.clear();expected.clear();
 
-        list.clear();expected.clear();
-        Collections.addAll(list, 1,2,3,2,5,2);
-        Collections.addAll(expected,1,3,3,5,5,5);
+        Collections.addAll(list,0,1,1,0,1);
+        Collections.addAll(expected,0,0,1,1,1);
         System.out.print(expected);
-        System.out.println(Main.notAlone(list,2));
-     
+        System.out.println(Main.zeroFront(list));
         list.clear();expected.clear();
-        Collections.addAll(list, 3,4);
-        Collections.addAll(expected,4,4);
-        System.out.print(expected);
-        System.out.println(Main.notAlone(list,3));
 
-        list.clear();expected.clear();
-        Collections.addAll(list, 4,3,4,4);
-        Collections.addAll(expected,4,3,4,4);
+        Collections.addAll(list,1,0);
+        Collections.addAll(expected,0,1);
+
         System.out.print(expected);
-        System.out.println(Main.notAlone(list,4));
+        System.out.println(Main.zeroFront(list));
     }
 }
