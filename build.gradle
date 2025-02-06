@@ -16,4 +16,6 @@ test {
 		events "passed", "skipped", "failed"
 		exceptionFormat "full"  // Show full exception details on failure
 	}
+
+
 }
